@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    overflow: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fcb6f8;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+.section {
+    font-family: monospace;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f4f4f4;
+}
+
+.section:target {
+    display: flex;
+    background-color: #eaeaea;
+}
+
+#inicio {
+    background-color: #ffffff;
+}
+
+#me{
+    background-color: #f4f4f4;
+}
+
+#proyectos {
+    background-color: #ffffff;
+}
+
+#contacto {
+    background-color: #ffffff;
+}
+
+.me-icons a {
+    color: rgb(53, 53, 53);
+    text-decoration: none;    
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.me-icons a:hover{
+    color: #838383;
+}
+
+
+.inicio-container {
+    display: flex;
+    align-items: center;
+    background-color:   rgb(236, 202, 252);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inicio-image {
+    border-radius: 50%;
+    height: 75px;
+    width: 80px;
+    margin-right: 20px;
+}
+
+.inicio-text h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+
+.profile-text p {
+    margin: 5px 0 0;
+    color: #555;
+}
+
+.typing-effect {
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    width:24ch;
+    animation: typing 5s steps(24, end) 2s infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0% { width: 0}
+    50% { width: 24ch}
+    100%{ width: 0;} 
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent;}
+    50% { border-color: black;}
+}
+
+
+
+/* Sobre mi */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.container > div {
+    background-color: #f4f4f4;
+    border: 2px solid #ac8bc2;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* efecto de realce */
+.container > div:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+h3 {
+    color: #ac8bc2;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 23px;
+    font-size: 1.2em;
+}
+
+#container-d {
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.Datos-i {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.container-datos-i {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.interes-title {
+    font-size: 20px;
+    color: #ac8bc2;
+    margin-bottom: 20px;
+}
+
+.interests-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+
+.interes-box {
+    position: relative;
+    width: 190px;
+    height: 120px;
+    border: 2px solid #ac8bc2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: none;
+}
+
+.interes-box p {
+    margin: 0;
+    color: #251033;
+    margin-bottom: 20px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.interes-text {
+    position: absolute;
+    bottom: -100%;
+    background-color: rgba(129, 41, 180, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.interes-box:hover .interes-text {
+    bottom: 0;
+}
+
+
+
+
+/*PROYECTOS*/
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjetaGaleria {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border: 2px solid #ac8bc2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.tarjetaGaleria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.descripcion {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.descripcion h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.descripcion p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+.tarjetaGaleria:hover .descripcion {
+    opacity: 1;
+}
+
+.tarjetaGaleria:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+/*CONTACTO*/
+#contacto {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-family: monospace;
+}
+
+#contacto h1 {
+    margin-bottom: 10px;
+}
+
+#contacto p {
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.form-container, .info-container {
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    border: 2px solid #fcb6f8;
+    border-radius: 20px;
+    flex: 1;
+    max-width: 500px;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+button {
+    background-color: #c69ece;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+button:hover {
+    background-color: #649aa4;
+}
+
+.info-container {
+    background-color: #e6d8f2;
+    border: 30px solid #e6d8f2;
+    border-radius: 10px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.info-container h2 {
+    margin-bottom: 20px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: monospace;
+}
+
+.icon p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
